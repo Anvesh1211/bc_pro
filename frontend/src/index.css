@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Light / White Theme by Default (Blockscan / Etherscan Clean Look) */
+:root {
+  --bg-base: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-surface-elevated: #f1f5f9;
+  --border-subtle: #e2e8f0;
+  --border-focus: #2563eb;
+  --primary: #2563eb;
+  --primary-glow: rgba(37, 99, 235, 0.15);
+  --emerald: #16a34a;
+  --emerald-glow: rgba(22, 163, 74, 0.15);
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+}
+
+/* Dark Theme (Blockscan Screenshot Look) */
+[data-theme="dark"] {
+  --bg-base: #111214;
+  --bg-surface: #181a1c;
+  --bg-surface-elevated: #1e2124;
+  --border-subtle: #282a2d;
+  --border-focus: #3b82f6;
+  --primary: #3b82f6;
+  --primary-glow: rgba(59, 130, 246, 0.25);
+  --emerald: #22c55e;
+  --emerald-glow: rgba(34, 197, 94, 0.25);
+  --text-main: #ffffff;
+  --text-muted: #8b949e;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-base);
+  color: var(--text-main);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+code, pre {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Blockscan Clean Card Token */
+.fintech-card {
+  background: var(--bg-surface) !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05) !important;
+  transition: all 0.2s ease-in-out;
+}
+
+.fintech-card:hover {
+  border-color: var(--primary) !important;
+  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.5);
+}
